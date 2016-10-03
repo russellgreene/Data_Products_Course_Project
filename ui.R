@@ -27,7 +27,15 @@ shinyUI(fluidPage(
        checkboxInput("vs", "vs", FALSE),
        checkboxInput("gear", "gear", FALSE),
        checkboxInput("carb", "carb", FALSE),
-       checkboxInput("wt", "wt", FALSE)
+       checkboxInput("wt", "wt", FALSE),
+       br(),br(),br(),br(),br(),br(),
+       h4("Documentation:"),
+       h6(paste("Please select at least one regressor.  The server code will ",
+                "automatically run and the regression results will be displayed ",
+                "on the right panel.  The residual graph is displayed on the top. ",
+                "Below that the R squared value is given.  Then the individual ",
+                "regression parameters are displayed.  Finally the confidence ", 
+                "intervals for the parameters are displayed.", sep =""))
     ),
 
     # Main panel shows the results of the (multi-variable) regression
